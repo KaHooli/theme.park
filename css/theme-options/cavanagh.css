@@ -34,4 +34,27 @@
   --petio-spinner: invert(62%) sepia(54%) saturate(526%) hue-rotate(358deg) brightness(93%) contrast(86%);
   --gitea-color-primary-dark-4: 116, 18, 22;
   --overseerr-gradient: linear-gradient(0deg, rgba(12, 12, 13, .96) 0%, rgba(74, 12, 16, .76) 58%, rgba(143, 23, 27, .20) 100%) center center/cover no-repeat fixed;
+
+  /* SABnzbd 5.1+ design tokens. Glitter now uses these for its queue,
+     configuration cards, tables, inputs, dropdowns, and modal surfaces. */
+  --clr-page-bg: #0c0c0d;
+  --clr-surface: #1b1516;
+  --clr-surface-alt: #231a1c;
+  --clr-surface-hover: #332124;
+  --clr-border: rgba(198, 154, 69, .28);
+  --clr-border-subtle: rgba(198, 154, 69, .13);
+  --clr-text: #f6f0e5;
+  --clr-text-muted: #b7aa98;
+  --clr-error: #ff6b6f;
+  --clr-link: #d9b66e;
+  --clr-input-bg: #281f20;
+  --clr-input-border: #5c4444;
+  --clr-dropdown-bg: #201719;
+  --clr-modal-bg: #1b1516;
+  --clr-modal-header-bg: #4a0c10;
+  --clr-table-bg: #201719;
+  --clr-table-row-alt: #2a2021;
+  --clr-progress-track: #3a2b2c;
+  --clr-toggle-active: #c69a45;
+  --clr-toggle-inactive: #6f6260;
 }
