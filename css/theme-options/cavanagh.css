@@ -26,7 +26,7 @@
 
   --text: #f6f0e5;
   --text-hover: #fffaf1;
-  --text-muted: #b7aa98;
+  --text-muted: #c9bdad;
 
   /* Application-specific Theme Park variables. */
   --arr-queue-color: #c69a45;
@@ -57,4 +57,80 @@
   --clr-progress-track: #3a2b2c;
   --clr-toggle-active: #c69a45;
   --clr-toggle-inactive: #6f6260;
+}
+
+/* Bazarr
+ *
+ * Bazarr's current Mantine defaults otherwise leak grey and purple surfaces
+ * into the Cavanagh palette. Keep these overrides in the theme option so the
+ * shared Bazarr base remains neutral for every other Theme Park theme. */
+
+/* Join the app header, page toolbar, and navigation into one layered shell. */
+.bazarr-Header-root[class*="bazarr-"] {
+  background: linear-gradient(90deg, #151515 0%, #201719 56%, #151515 100%);
+  border-bottom-color: rgba(198, 154, 69, .22);
+}
+
+#root > div > div > main > div > div.bazarr-Group-root[class*="bazarr-"],
+#root > div > div > main > form > div.bazarr-Group-root[class*="bazarr-"] {
+  background: linear-gradient(90deg, rgba(74, 12, 16, .66), rgba(32, 23, 25, .94) 42%, rgba(21, 21, 21, .96));
+  border-bottom: 1px solid rgba(198, 154, 69, .16);
+}
+
+.bazarr-Navbar-root[class*="bazarr-"] {
+  background: linear-gradient(180deg, #1b1718 0%, #151515 100%);
+  border-right-color: rgba(198, 154, 69, .18);
+}
+
+/* Replace Bazarr/Mantine's purple application and active-navigation accents. */
+.bazarr-Header-root[class*="bazarr-"] .bazarr-Badge-root[class*="bazarr-"] {
+  background: #8f171b !important;
+  color: #fffaf1 !important;
+  border: 1px solid rgba(217, 182, 110, .24);
+}
+
+.bazarr-Navbar-root[class*="bazarr-"] a[aria-current="page"],
+.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] {
+  background: linear-gradient(90deg, rgba(143, 23, 27, .30), transparent 82%) !important;
+  border-left-color: rgb(var(--accent-color)) !important;
+}
+
+/* Use quiet charcoal/oxblood table bands instead of flat grey and black. */
+[class*="bazarr-"] table tbody tr {
+  background: rgba(17, 16, 16, .90) !important;
+}
+
+[class*="bazarr-"] table.__bazarr-ref-striped tbody tr:nth-of-type(2n+1),
+[class*="bazarr-"] table[data-striped] tbody tr:nth-of-type(2n+1),
+[class*="bazarr-"][data-striped] table tbody tr:nth-of-type(2n+1),
+[class*="bazarr-"][data-striped] tbody tr:nth-of-type(2n+1) {
+  background: rgba(42, 29, 31, .94) !important;
+}
+
+[class*="bazarr-"] table thead tr {
+  background: linear-gradient(90deg, #321013 0%, #201719 48%, #151515 100%) !important;
+}
+
+[class*="bazarr-"] table tbody tr td {
+  border-bottom-color: rgba(198, 154, 69, .13) !important;
+}
+
+[class*="bazarr-"] table thead tr th {
+  border-bottom-color: rgba(198, 154, 69, .30) !important;
+}
+
+/* Lift secondary labels and controls without competing with primary text. */
+.bazarr-Text-root[data-dimmed],
+.bazarr-Text-dimmed[class*="bazarr-"],
+.bazarr-Navbar-root[class*="bazarr-"] .bazarr-Text-root,
+.bazarr-Navbar-root[class*="bazarr-"] svg,
+.bazarr-Header-root[class*="bazarr-"] svg {
+  color: var(--text-muted) !important;
+}
+
+.bazarr-Navbar-root[class*="bazarr-"] a[aria-current="page"] .bazarr-Text-root,
+.bazarr-Navbar-root[class*="bazarr-"] a[aria-current="page"] svg,
+.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] .bazarr-Text-root,
+.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] svg {
+  color: var(--text-hover) !important;
 }
