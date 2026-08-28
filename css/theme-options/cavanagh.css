@@ -1,0 +1,37 @@
+/* Cavanagh Family theme
+ * Adapted from https://github.com/KaHooli/cavanagh-authentik-theme
+ */
+:root {
+  /* Deep charcoal and oxblood surfaces echo the Authentik dark theme while
+     retaining enough separation between the page, panels, and menus. */
+  --main-bg-color: radial-gradient(circle at 18% 42%, rgba(143, 23, 27, .26) 0%, rgba(74, 12, 16, .18) 24%, rgba(12, 12, 13, 0) 52%), linear-gradient(135deg, #151515 0%, #0c0c0d 72%) center center/cover no-repeat fixed;
+
+  --modal-bg-color: linear-gradient(145deg, #201719 0%, #151515 62%, #0c0c0d 100%) center center/cover no-repeat fixed;
+  --modal-header-color: linear-gradient(90deg, #4a0c10 0%, #281416 58%, #151515 100%) center center/cover no-repeat fixed;
+  --modal-footer-color: #151515;
+
+  --drop-down-menu-bg: #201719;
+
+  --button-color: #8f171b;
+  --button-color-hover: #a81e24;
+  --button-text: #fffaf1;
+  --button-text-hover: #ffffff;
+
+  /* Keep this value as an RGB triplet: Theme Park wraps it in rgb()/rgba(). */
+  --accent-color: 198, 154, 69;
+  --accent-color-hover: rgb(var(--accent-color), .82);
+  --link-color: #d9b66e;
+  --link-color-hover: #f0d79d;
+  --label-text-color: #231c18;
+
+  --text: #f6f0e5;
+  --text-hover: #fffaf1;
+  --text-muted: #b7aa98;
+
+  /* Application-specific Theme Park variables. */
+  --arr-queue-color: #c69a45;
+  --plex-poster-unwatched: #8f171b;
+  --petio-spinner: invert(62%) sepia(54%) saturate(526%) hue-rotate(358deg) brightness(93%) contrast(86%);
+  --gitea-color-primary-dark-4: 116, 18, 22;
+  --overseerr-gradient: linear-gradient(0deg, rgba(12, 12, 13, .96) 0%, rgba(74, 12, 16, .76) 58%, rgba(143, 23, 27, .20) 100%) center center/cover no-repeat fixed;
+}
