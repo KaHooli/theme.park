@@ -132,7 +132,8 @@
 [class*="bazarr-"] table[data-striped] tbody tr:nth-of-type(2n+1),
 [class*="bazarr-"][data-striped] table tbody tr:nth-of-type(2n+1),
 [class*="bazarr-"][data-striped] tbody tr:nth-of-type(2n+1),
-.mantine-Table-table[data-striped] tbody tr:nth-of-type(2n+1) {
+.mantine-Table-table[data-striped] tbody tr:nth-of-type(2n+1),
+.mantine-Table-table tbody tr:nth-of-type(2n+1) {
   background: rgba(42, 29, 31, .94) !important;
 }
 
