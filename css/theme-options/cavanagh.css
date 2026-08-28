@@ -71,15 +71,31 @@
   border-bottom-color: rgba(198, 154, 69, .22);
 }
 
+.mantine-AppShell-header {
+  background: linear-gradient(90deg, #151515 0%, #201719 56%, #151515 100%) !important;
+  border-bottom-color: rgba(198, 154, 69, .22) !important;
+}
+
 #root > div > div > main > div > div.bazarr-Group-root[class*="bazarr-"],
 #root > div > div > main > form > div.bazarr-Group-root[class*="bazarr-"] {
   background: linear-gradient(90deg, rgba(74, 12, 16, .66), rgba(32, 23, 25, .94) 42%, rgba(21, 21, 21, .96));
   border-bottom: 1px solid rgba(198, 154, 69, .16);
 }
 
+.mantine-AppShell-main > .mantine-Group-root:first-child,
+.mantine-AppShell-main > form > .mantine-Group-root:first-child {
+  background: linear-gradient(90deg, rgba(74, 12, 16, .66), rgba(32, 23, 25, .94) 42%, rgba(21, 21, 21, .96)) !important;
+  border-bottom: 1px solid rgba(198, 154, 69, .16);
+}
+
 .bazarr-Navbar-root[class*="bazarr-"] {
   background: linear-gradient(180deg, #1b1718 0%, #151515 100%);
   border-right-color: rgba(198, 154, 69, .18);
+}
+
+.mantine-AppShell-navbar {
+  background: linear-gradient(180deg, #1b1718 0%, #151515 100%) !important;
+  border-right-color: rgba(198, 154, 69, .18) !important;
 }
 
 /* Replace Bazarr/Mantine's purple application and active-navigation accents. */
@@ -89,8 +105,16 @@
   border: 1px solid rgba(217, 182, 110, .24);
 }
 
+.mantine-AppShell-header .mantine-Badge-root[data-variant="brand"] {
+  background: #8f171b !important;
+  color: #fffaf1 !important;
+  border: 1px solid rgba(217, 182, 110, .30);
+}
+
 .bazarr-Navbar-root[class*="bazarr-"] a[aria-current="page"],
-.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] {
+.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"],
+.mantine-AppShell-navbar a[aria-current="page"],
+.mantine-AppShell-navbar a[data-active] {
   background: linear-gradient(90deg, rgba(143, 23, 27, .30), transparent 82%) !important;
   border-left-color: rgb(var(--accent-color)) !important;
 }
@@ -100,10 +124,15 @@
   background: rgba(17, 16, 16, .90) !important;
 }
 
+.mantine-Table-table tbody tr {
+  background: #111010 !important;
+}
+
 [class*="bazarr-"] table.__bazarr-ref-striped tbody tr:nth-of-type(2n+1),
 [class*="bazarr-"] table[data-striped] tbody tr:nth-of-type(2n+1),
 [class*="bazarr-"][data-striped] table tbody tr:nth-of-type(2n+1),
-[class*="bazarr-"][data-striped] tbody tr:nth-of-type(2n+1) {
+[class*="bazarr-"][data-striped] tbody tr:nth-of-type(2n+1),
+.mantine-Table-table[data-striped] tbody tr:nth-of-type(2n+1) {
   background: rgba(42, 29, 31, .94) !important;
 }
 
@@ -111,11 +140,23 @@
   background: linear-gradient(90deg, #321013 0%, #201719 48%, #151515 100%) !important;
 }
 
+.mantine-Table-table thead tr {
+  background: linear-gradient(90deg, #321013 0%, #201719 48%, #151515 100%) !important;
+}
+
 [class*="bazarr-"] table tbody tr td {
   border-bottom-color: rgba(198, 154, 69, .13) !important;
 }
 
+.mantine-Table-table tbody tr td {
+  border-bottom-color: rgba(198, 154, 69, .13) !important;
+}
+
 [class*="bazarr-"] table thead tr th {
+  border-bottom-color: rgba(198, 154, 69, .30) !important;
+}
+
+.mantine-Table-table thead tr th {
   border-bottom-color: rgba(198, 154, 69, .30) !important;
 }
 
@@ -124,13 +165,21 @@
 .bazarr-Text-dimmed[class*="bazarr-"],
 .bazarr-Navbar-root[class*="bazarr-"] .bazarr-Text-root,
 .bazarr-Navbar-root[class*="bazarr-"] svg,
-.bazarr-Header-root[class*="bazarr-"] svg {
+.bazarr-Header-root[class*="bazarr-"] svg,
+.mantine-Text-root[data-dimmed],
+.mantine-AppShell-navbar .mantine-Text-root,
+.mantine-AppShell-navbar svg,
+.mantine-AppShell-header svg {
   color: var(--text-muted) !important;
 }
 
 .bazarr-Navbar-root[class*="bazarr-"] a[aria-current="page"] .bazarr-Text-root,
 .bazarr-Navbar-root[class*="bazarr-"] a[aria-current="page"] svg,
 .bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] .bazarr-Text-root,
-.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] svg {
+.bazarr-Navbar-root[class*="bazarr-"] a[data-active="true"] svg,
+.mantine-AppShell-navbar a[aria-current="page"] .mantine-Text-root,
+.mantine-AppShell-navbar a[aria-current="page"] svg,
+.mantine-AppShell-navbar a[data-active] .mantine-Text-root,
+.mantine-AppShell-navbar a[data-active] svg {
   color: var(--text-hover) !important;
 }
