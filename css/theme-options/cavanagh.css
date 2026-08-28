@@ -161,6 +161,36 @@
   border-bottom-color: rgba(198, 154, 69, .30) !important;
 }
 
+/* Match Mantine 7 pagination to the Cavanagh palette. */
+.mantine-Pagination-control {
+  background: #201719 !important;
+  border-color: rgba(198, 154, 69, .24) !important;
+  color: var(--text-muted) !important;
+}
+
+.mantine-Pagination-control:hover:not([data-active]):not([data-disabled]) {
+  background: #332124 !important;
+  border-color: rgba(198, 154, 69, .48) !important;
+  color: var(--text-hover) !important;
+}
+
+.mantine-Pagination-control[data-active] {
+  background: rgb(var(--accent-color)) !important;
+  border-color: rgb(var(--accent-color)) !important;
+  color: var(--label-text-color) !important;
+}
+
+.mantine-Pagination-control[data-disabled],
+.mantine-Pagination-control:disabled {
+  background: #151515 !important;
+  border-color: rgba(198, 154, 69, .10) !important;
+  color: #746c62 !important;
+}
+
+.mantine-Pagination-dots {
+  color: var(--text-muted) !important;
+}
+
 /* Lift secondary labels and controls without competing with primary text. */
 .bazarr-Text-root[data-dimmed],
 .bazarr-Text-dimmed[class*="bazarr-"],
